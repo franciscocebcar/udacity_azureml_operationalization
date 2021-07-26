@@ -7,7 +7,17 @@ Once the best model is deployed on an Azure Container Instance and is available 
 I also create and publish a pipeline that performs that training using the AzureML SDK. This is performed using a Jupyter Notebook executed on an Azure Compute Instance, although it can be run locally as well (i.e. local VS Code connected to Azure)
 
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
+This is a high level diagram of the steps completed for this project:
+
+![Image architecture](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/architecture.png)
+
+We first use the AzureML AutoML functionality to train a number of models and identify the best performing model.
+
+We then deploy the best model and obtain a REST API endpoint.
+
+Once the model is deployed, we test it by using Python to call the REST API endpoint and Apache Benchmark to generate some metrics.
+
+Lastly, I create a AzureML Pipeline programmatically using the AzureML SDK so that all the model training steps can be executed as a pipeline through a REST API endpoint (provisioning of cluster, acquisition/register of dataset and AutoML configuration and execution)
 
 ## Key Steps
 ### Creation of AutoML Experiment
