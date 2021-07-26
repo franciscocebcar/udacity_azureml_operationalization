@@ -13,16 +13,20 @@ I also create and publish a pipeline that performs that training using the Azure
 ### Creation of AutoML Experiment
 The AutoML experiment is created by completing 3 basic steps: registering/selecting the dataset, specifying the compute target, and specifying AutoML configuration settings.
 The registered dataset:
-https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_registered_dataset.png
+![Image of registered dataset]
+(https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_registered_dataset.png)
 
 Once the AutoML Experiment completes, we can check its details, including the best model:
-https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_completed_automl_run.png
+![Image of run details]
+(https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_completed_automl_run.png)
 
 Best model:
-https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_best_model.png
+![Image of best model]
+(https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_best_model.png)
 
 We can dig deeper and inspect all the metrics captured:
-https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_best_model_metrics.png
+![Image of model metrics]
+(https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_best_model_metrics.png)
 
 ### Deployment of Best Model
 ### Enabling Application Insights and checking logs
