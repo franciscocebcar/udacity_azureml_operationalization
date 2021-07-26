@@ -12,6 +12,7 @@ I also create and publish a pipeline that performs that training using the Azure
 ## Key Steps
 ### Creation of AutoML Experiment
 The AutoML experiment is created by completing 3 basic steps: registering/selecting the dataset, specifying the compute target, and specifying AutoML configuration settings.
+
 The registered dataset:
 ![Image of registered dataset](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_registered_dataset.png)
 
@@ -25,6 +26,14 @@ We can dig deeper and inspect all the metrics captured:
 ![Image of model metrics](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_2_best_model_metrics.png)
 
 ### Deployment of Best Model
+We can then click on the best model and then on the "Deploy" button in order to deploy the model and get a REST API endpoint.
+
+Once the model is deployed, we see its endpoint:
+![Image endpoints](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_3_deployed_model_endpoint.png)
+
+And we can inspect the endpoint details:
+![Image endpoint details](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_3_endpoint_details.png)
+
 ### Enabling Application Insights and checking logs
 ### Exploring the REST API endpoint using Swagger
 ### Consume Model Endpoint to generate predictions
