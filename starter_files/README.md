@@ -57,7 +57,39 @@ We can download the swagger.json file from the endpoint, and inspect it locally 
 This allows us to inspect the web service endpoints in order to build a JSON file to submit to the model endpoint.
 
 ### Consume Model Endpoint to generate predictions
+We can use a Python script to create a JSON payload and call the REST API endpoint:
+
+![Image endpoint call](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_6_endpoint_call.png)
+
+We can also run Apache Benchmark (ab) to make multiple calls to the REST API endpoint and capture some metrics:
+
+![Image benchmark start](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_6_benchmark_start.png)
+
+![Image benchamark end](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_6_benchmark_end.png)
+
 ### Create, Publish and Consume Training Pipeline
+Lastly, we can also create an AzureML Pipeline using the SDK to perform all the steps programmatically.
+For this purpose, I used the Jupyter notebook provided and modified it to refer to the experiment, cluster and dataset that had been manually created.
+
+After creating the pipeline, we can see it in the AzureML interface:
+
+![Image pipelines](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_7_pipelines.png)
+
+After running and publishing the pipeline, we is accessible through a pipeline endpoing:
+
+![Image pipeline endpoint](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_7_pipeline_endpoint.png)
+
+And we can see the details of the published pipeline:
+
+![Image published pipeline](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_7_published_pipeline.png)
+
+In the Jupyter Notebook, as the pipeline was running, we could track its progress via the RunDetails Widget:
+
+![Image run details](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_7_rundetails_widget.png)
+
+Lastly, we can schedule the pipeline to run every 12 hours:
+
+![Image schedule](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_7_scheduled_run.png)
 
 ## Screen Recording
 Please access the recording through this link: https://youtu.be/pyIye5BNzjs
