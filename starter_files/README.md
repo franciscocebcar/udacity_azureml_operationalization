@@ -101,8 +101,14 @@ Lastly, we can schedule the pipeline to run every 12 hours:
 
 ![Image schedule](https://github.com/franciscocebcar/udacity_azureml_operationalization/blob/master/starter_files/screenshots/step_7_scheduled_run.png)
 
+## Potential Improvements
+Once the model is deployed and is being used, we could implement a mechanism that monitors the performance of the model and triggers a training and deployment pipeline once certain KPI performance metrics are below a given threshold. This would require knowledge of the actual outcome of a marketing campaign vs the prediction served by the model.
+
+Another area that could be explored, is analyzing data drift as a way to determine whether the model needs to be retrained.
+
 ## Screen Recording
 Please access the recording through this link: https://youtu.be/pyIye5BNzjs
 
 ## Standout Suggestions
-No standout suggestions were attempted as I would focus on other areas of data analysis
+I performed the load test using Apache Benchmark tool. It make 10 API calls to the model endpoint and they were all successful, taking on average 266 milliseconds (92.9 standard deviation) which is very well below the 60 seconds timeout. I was able to validate in Application Insights some metrics generated as the result of this test.
+
